@@ -1,0 +1,40 @@
+<div class="row">
+    <h2>Ürünler</h2>
+    <div class="col-sm-7">
+      
+      <app-product-cart *ngFor="let item of products" [product]="item"></app-product-cart>
+  
+     
+     
+
+
+    </div>
+    <div class="col sm-5">
+      <h2>Sepet</h2>
+      <table  class="table table-hover">
+        <thead>
+          <th>Ürün</th>
+          <th>Miktar</th>
+          <th class="text-end">Fiyat</th>
+        </thead>
+        <tbody *ngFor="let item of basket" >
+          <tr>
+            <td>{{item.Name}}</td>
+            <td>{{item.quantity}}</td>
+            <td class="text-end">{{item.Price * item.quantity}}</td>
+          </tr>
+         
+          
+        </tbody>
+       <tfoot>
+         <tr>
+           <td><b>Toplam:{{getTotal().toFixed(2)}} TL</b>
+           </td>
+          
+           <td class="text-end"><b></b></td>
+         </tr>
+         <button class="btn btn-success" (click)="addOrder()">add</button>
+       </tfoot>
+      </table>
+    </div>
+  </div>

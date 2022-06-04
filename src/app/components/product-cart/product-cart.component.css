@@ -1,0 +1,37 @@
+
+img{
+    width:190px;
+    height:200px;
+   cursor: pointer;
+}
+
+.product-name{
+    color:green;
+}
+.product{
+    width:200px;
+    height:320px;
+    border-radius: 10px;
+    box-shadow: 0px 25px 40px #8bd3f033;
+}
+
+.btn-warning{
+    margin-right:300px;
+}
+.quantity-bar{
+    margin-left:40px;
+}
+.product-name{
+    margin-left:40px;
+}
+.product-price{
+    margin-left:40px;
+}
+input{
+    width: 40px;
+}
+
+
+a{text-decoration: none;}
+
+  

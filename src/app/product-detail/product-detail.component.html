@@ -1,0 +1,18 @@
+<p><i>Product Id: {{productId}}</i></p>
+<div class="d-flex align-items-start">
+    <img [src]="product?.path" alt="" class="src" width="210px" height="290px" >
+    <div>
+        <h2>{{product?.Name}} </h2>
+        <p>{{product?.info}}</p>
+        
+        <h3 class="price mt-3">For only {{product?.Price?.toFixed(2)}} TL!</h3>
+        <div class="mt-5">
+            <div *ngIf="addedProduct" class="alert alert-success">{{addedProduct.quantity}}    {{addedProduct.Name}} is added to basket.</div>
+            <h3>You may be Interested...</h3>
+            <div class="d-flex">
+            <app-product-cart (productAdded)="showMessage($event)" *ngFor="let item of relatedProducts" [product]="item" ></app-product-cart>
+        </div>
+        </div>
+
+    </div>
+</div>
